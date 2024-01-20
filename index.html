@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vis Network Example</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    #mynetwork {
+      height: 800px;
+      /* あるいは必要な高さに設定 */
+      width: 100%;
+    }
+
+    .idStyle {
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .labelStyle {
+      color: #666;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .customPropertyStyle {
+      color: #999;
+      font-size: 12px;
+      font-weight: lighter;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="./index.html" method="get">
+    <input type="text" id="idInput" name="id" required>
+    <button type="submit" id="searchButton">検索</button>
+</form>
+
+  <div id="customProperty">
+    <div id="idElement" class="idStyle"></div>
+    <div id="labelElement" class="labelStyle"></div>
+    <div id="customPropertyElement" class="customPropertyStyle"></div>
+  </div>
+  <div id="mynetwork"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
