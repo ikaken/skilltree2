@@ -1,52 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Vis Network Example</title>
-  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-  <style>
-    #mynetwork {
-      height: 800px;
-      /* あるいは必要な高さに設定 */
-      width: 100%;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vis Network Example</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    .idStyle {
-      color: #333;
-      font-size: 16px;
-      font-weight: bold;
-    }
+        #mynetwork {
+            height: 70vh; /* ビューポートの高さの70%に設定 */
+            width: 100%;
+        }
 
-    .labelStyle {
-      color: #666;
-      font-size: 14px;
-      font-weight: normal;
-    }
+        #customProperty {
+            padding: 10px;
+            box-sizing: border-box;
+        }
 
-    .customPropertyStyle {
-      color: #999;
-      font-size: 12px;
-      font-weight: lighter;
-    }
-  </style>
+        #idElement, #labelElement, #customPropertyElement {
+            margin-bottom: 5px;
+        }
+
+        .idStyle {
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .labelStyle {
+            color: #666;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .customPropertyStyle {
+            color: #999;
+            font-size: 12px;
+            font-weight: lighter;
+        }
+
+        #buttonContainer {
+            margin-top: 10px;
+        }
+
+        form {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #idInput {
+            padding: 5px;
+        }
+
+        #searchButton {
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <form action="./index.html" method="get">
-    <input type="text" id="idInput" name="id" required>
-    <button type="submit" id="searchButton">検索</button>
-</form>
+    <form action="./index.html" method="get">
+        <input type="text" id="idInput" name="id" required>
+        <button type="submit" id="searchButton">検索</button>
+    </form>
 
-  <div id="customProperty">
-    <div id="idElement" class="idStyle"></div>
-    <div id="labelElement" class="labelStyle"></div>
-    <div id="customPropertyElement" class="customPropertyStyle"></div>
-  </div>
-  <div id="mynetwork"></div>
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+    <div id="customProperty">
+        <div id="idElement" class="idStyle"></div>
+        <div id="labelElement" class="labelStyle"></div>
+        <div id="customPropertyElement" class="customPropertyStyle"></div>
+        <div id="buttonContainer"></div>
+    </div>
+    <div id="mynetwork"></div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
